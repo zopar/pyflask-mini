@@ -1,6 +1,6 @@
 # pyflask-mini
-Minimalistic flask app in Docker  
-This app give you  
+Minimalistic flask app in Docker we use waitress as WSGI server
+This app will give you  
 "Success!" on /  
 "Ok" on /ping  
 
@@ -9,12 +9,13 @@ Build Docker image manually from git cloned repo
 
 ```
 $ git clone https://github.com/zopar/pyflask-mini.git
+$ cd pyflask-mini
 $ docker build -t zopar/pyflask-mini .
 ```
 
 ### Download precreated image
 ```
-docker pull zopar/pyflask-mini
+$ docker pull zopar/pyflask-mini
 ```
 
 ### Run the container
@@ -32,17 +33,15 @@ This deployment is tested on GKE
 
 ## Deploy app on kubernetes
 ```
-kubectl apply -f deployment.yaml
+$ kubectl apply -f deployment.yaml
 ```
 Deployment.yaml contains, the Deployment part, Service and Nginx-ingress  
 Warning: We use latest just becayuse this is an example. It is not for production use.
 
 Wait a while and take the external ip
 ```
-kubectl get ingress ingress-pyflask-mini
+$ kubectl get ingress ingress-pyflask-mini
 ```
 
 Point your browser on external ip, you will find Success! 
 and on /ping you will find Ok
-
-
