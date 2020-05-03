@@ -23,3 +23,25 @@ Create a container from image
 ```
 $ docker run --name pyflask-mini -d -p 8080:8080 zopar/pyflask-mini
 ```
+
+### Kubernetes deployment 
+This deployment is based on nginx-ingress controller
+We assume that you already have a cluster correctly setup and configured  
+whit nginx-ingress controller
+This deployment is tested on GKE
+
+## Deploy app on kubernetes
+```
+kubectl apply -f deployment.yaml
+```
+Deployment.yaml contains, the Deployment part, Service and Nginx-ingress  
+
+Wait a while and take the external ip
+```
+kubectl get ingress ingress-pyflask-mini
+```
+
+Point your browser on external ip, you will find Success! 
+and on /ping you will find Ok
+
+
