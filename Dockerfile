@@ -1,5 +1,5 @@
 FROM python:3.6
-LABEL maintainer="armando.trinchillo@gmail.com"
+LABEL maintainer="armando.trinchillo _at_ gmail.com"
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
