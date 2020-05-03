@@ -35,6 +35,7 @@ This deployment is tested on GKE
 kubectl apply -f deployment.yaml
 ```
 Deployment.yaml contains, the Deployment part, Service and Nginx-ingress  
+Warning: We use latest just becayuse this is an example. It is not for production use.
 
 Wait a while and take the external ip
 ```
