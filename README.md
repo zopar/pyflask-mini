@@ -1,5 +1,5 @@
 # pyflask-mini
-Minimalistic flask app in Docker we use waitress as WSGI server
+Minimalistic flask app in Docker we use waitress as WSGI server.  
 This app will give you  
 "Success!" on /  
 "Ok" on /ping  
